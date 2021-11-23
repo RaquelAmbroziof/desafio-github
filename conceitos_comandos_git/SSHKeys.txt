@@ -1,0 +1,40 @@
+Comandos pra gerar as chaves pública e privada:
+fazer no git bash:
+
+ssh-key -t ed25519 -C seuemail@gmail.com
+
+Após dar enter, ele vai informar que está criando as chaves
+e vai informar o local, vc aperta enter novamente,
+ele vai pedir uma senha, (talvez duas vezes), e por fim,
+gerou as chaves no local indicado
+
+Encontre onde está essas chaves, copie o conteúdo da chave
+pública (.pub)
+
+Após, logado no git, vá para configurações -> SSH e GPG chaves
+aperte em add new chave
+
+coloque um título informando qual máquina está com essa chave
+e no campo key, cole o conteúdo que copiou do .pub
+aperte Add SSh key, (talvez ele peça pra colocar a senha go
+github) e pronto, volte para o git bash
+
+Na pasta .ssh (onde foi gerado as chaves), digite o seguinte
+comando para gerar um agente:
+
+eval $(ssh-agent -s)
+
+Após, digite o seguinte comando pra entregar a chave pra o 
+agente gerado:
+
+ssh-add nome_da_chave_privada
+
+Ele vai pedir a senha da chave, vc digita, e enter.
+
+Lembrando que passamos diretamente o nome da chave, pq estamos
+dentro da pasta onde contém a chave, se vc não estiver,
+passe o caminho até a chave.
+
+Agora está tudo OK, vc já pode usar a chave!
+
+

@@ -1,0 +1,64 @@
+##Comandos de configuração:
+
+Setar seu usuário:
+git config --global user.name "seunomedeusuariogithub"
+
+Setar seu e--mail:
+git config --global user.email "seuemaildeusuariogithub"
+
+Listar configurações:
+git config --list
+
+##Repositório Local:
+
+Iniciar repositório:
+git init
+
+Ver status do repositório:
+git status
+
+Adicionar um arquivo/diretório (staged area):
+git add nome_do_arquivo.txt
+git add nome_do_diretorio
+
+Adicionar todos os arquivos/diretórios:
+git add .
+
+Adicionar um arquivo no .gitignore:
+git add -f arquivo.txt
+
+Commitar arquivo/diretório:
+git commit arquivo.txt
+
+Commitar vários arquivos:
+git commit arquivo1.txt arquivo2.txt
+
+Commitar com mensagem:
+git commit arquivo.txt -m "sua mensagem"
+
+Remover arquivo:
+git rm arquivo.txt
+
+Remover diretório:
+git rm -r diretorio
+
+Visualizar histórico:
+git log
+
+##Repositório Remoto
+
+Ver repositórios remotos:
+git remote
+git remote -v
+
+Vincular repositório local com remoto:
+git remote add origin endereço_da_url_do_seu_repo_remoto
+
+Ver informações dos repositórios remotos:
+git remote show origin
+
+Atualizar repositório local de acordo com remoto:
+git pull
+
+Clonar repositório remoto já existente:
+git clone endereço_da_url_do_seu_repo_remoto
